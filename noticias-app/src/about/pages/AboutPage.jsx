@@ -1,8 +1,11 @@
-import React from 'react'
-import { AboutCard } from '../components/AboutCard'
+import React from 'react';
+import { AboutCard } from '../components/AboutCard';
 
 
 export const AboutPage = () => {
+
+  
+
   return (
     <>
         <div className=''>

@@ -16,11 +16,13 @@ p{
 @media (min-width: 768px) {
     .tablet {
       width: 40%;
+      margin: 20px;
     }
   }
 
 @media (min-width: 992px) {
     .desktop {
       width: 25%;
+      margin: 20px;
     }
   }
