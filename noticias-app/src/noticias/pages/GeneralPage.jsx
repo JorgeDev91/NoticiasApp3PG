@@ -1,18 +1,14 @@
-import { useEffect } from "react";
-import { NewsCard } from "../components";
-import { useDispatch, useSelector } from 'react-redux';
-import { getNews } from "../../store/slices/news/thunks";
+
+import { NewsCard, PageNav } from "../components";
+import { useSelector } from 'react-redux';
+
 
 
 
 export const GeneralPage = () => {
+  
+  
 
-   const dispatch = useDispatch();      // se utiliza siempre que se requiera una acción
-  
-  useEffect(() => {
-    dispatch( getNews(4, 'general'));  // se llama al thunk para la petición a la api de noticias
-  }, [])
-  
   const { news={} } = useSelector( state => state.newsCategory);  //  state del store!
   
 
@@ -34,7 +30,10 @@ export const GeneralPage = () => {
         
        
       </div>
-    
+
+
+    <PageNav category = {"general"}/>
+      
     </>
   )
 }

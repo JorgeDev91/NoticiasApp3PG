@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom"
-import { Navbar } from "../../ui"
+import { FootBar, Navbar } from "../../ui"
 import { BusinessPage, EntertainmentPage, GeneralPage, HealthPage, SciencePage, SportsPage, TechnologyPage } from '../pages'
 
 
@@ -21,6 +21,7 @@ export const NoticiasRoutes = () => {
           </Routes>
 
         </div>
+        <FootBar />
     </>
   )
 }

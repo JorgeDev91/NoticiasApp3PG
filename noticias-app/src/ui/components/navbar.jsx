@@ -26,11 +26,8 @@ export const Navbar = () => {
 
                             <div className='flex-lg-colum col-lg-2 pt-3 pt-sm-2 pt-md-2'>
                                 <form className="d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-start">
-                                    <input type="text" className="form-control form-contol-sm" id="searchInput" aria-describedby="searchInput" placeholder="Search" />
-                                    <span className='d-flex p-1'></span>
-
                                     <button 
-                                        className="btn btn-outline-secondary material-symbols-outlined"
+                                        className="btn btn-outline-secondary material-symbols-outlined pt-sm-3 pt-md-3 pt-lg-2"
                                         onClick={onSearch}
                                     >Search</button>
                                 </form>

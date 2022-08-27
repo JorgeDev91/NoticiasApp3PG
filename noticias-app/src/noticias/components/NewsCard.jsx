@@ -1,13 +1,19 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+
 import '../styles/NewsCard.css';
 
 
 export const NewsCard = (article) => {
   
+  let handleArticle = () => {
 
-  
+    localStorage.removeItem('article');
+    localStorage.setItem('article', JSON.stringify(article));
+    
+  }
+
   return (
     <>
       
@@ -17,7 +23,7 @@ export const NewsCard = (article) => {
           <h5 className="card-title"> {article.title} </h5>
           <h6 className="card-subtitle mb-2 text-muted"> {article.publishedAt}  </h6>
           <p className="card-text"> {article.content} </p>
-          <NavLink to={'/about'} className="card-link d-flex justify-content-center">Read more...</NavLink>
+          <NavLink onClick={ handleArticle } to={'/about'} className="card-link d-flex justify-content-center">Read more...</NavLink>
         </div>
       </div>
     

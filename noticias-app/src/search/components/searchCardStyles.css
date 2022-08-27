@@ -1,0 +1,28 @@
+.dimentions{
+    width: 30%;
+}
+
+p{
+    overflow: hidden;
+    max-height: 20vh;
+}
+
+@media (min-width: 576px)
+{
+    .movile {
+        width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .tablet {
+      width: 40%;
+      margin: 20px;
+    }
+  }
+
+@media (min-width: 992px) {
+    .desktop {
+      width: 25%;
+      margin: 20px;
+    }
+  }
