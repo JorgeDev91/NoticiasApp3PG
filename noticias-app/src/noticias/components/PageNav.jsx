@@ -11,7 +11,12 @@ export const PageNav = ( {category} ) => {
     let [page, setpage] = useState(1);
     
     const handleNextPage = () => {
-        
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+
         (pageLength < 10)
         ? setpage( page + 0)
         : setpage( page + 1)
@@ -19,6 +24,11 @@ export const PageNav = ( {category} ) => {
     }
     
     const handlePrevPage = () => {
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
 
         ( page === 1)
         ? setpage( page - 0 )
