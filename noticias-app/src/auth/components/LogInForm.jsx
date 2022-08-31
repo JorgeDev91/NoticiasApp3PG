@@ -50,7 +50,7 @@ export const LogInForm = ({ setshowLogin }) => {
       navigate('/general', { replace: true});
     }
 
-  }, [authenticated]);
+  }, [authenticated, navigate]);
   
   
 
