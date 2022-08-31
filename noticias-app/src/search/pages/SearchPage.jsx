@@ -22,7 +22,7 @@ export const SearchPage = () => {
   
   useEffect(() => {
     dispatch( getNewsByQuery(1, queryValue));
-  }, [queryValue])
+  }, [queryValue, dispatch])
   
   
   const onSubmit = (data) => {

@@ -1,14 +1,15 @@
+import { useSelector } from 'react-redux';
 import { NavLink, useNavigate } from 'react-router-dom';
 
 import '../styles/navbar.css';
+import { LogInButton } from './LogInButton';
+import { LogOutButton } from './LogOutButton';
+
 
 export const Navbar = () => {
 
+    const { status } = useSelector(state => state.auth); // traigo el status para saber si está logeado o no y mostrar el boton de login o logout
     const navigate = useNavigate();
-
-    const onLogin = () => {
-        navigate('/login', { replace: true});
-    }
 
     const onSearch = () => {
         navigate('/search', { replace: true});
@@ -33,7 +34,7 @@ export const Navbar = () => {
                                 </form>
                             </div>
 
-                        <div className='flex-lg-colum col-lg-8 text-center d-flex justify-content-center'>
+                        <div className='flex-lg-colum col-lg-7 text-center d-flex justify-content-center'>
                             <ul className="navbar-nav mr-auto mt-2 mt-lg-0 ">
                                 <li className="nav-item">
                                     <NavLink className={ ({isActive}) => `nav-item nav-link ${ isActive ? 'active' : '' }`} to={'/general'}> General</NavLink>
@@ -59,12 +60,13 @@ export const Navbar = () => {
                             </ul>
                         </div>
                         
-                        <div className='flex-lg-colum col-lg-2'>
+                        <div className='flex-lg-colum col-lg-3'>
                             <form className="d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-end">
-                                <button 
-                                    className="btn btn-outline-secondary my-2 my-sm-0 mr-3"
-                                    onClick={onLogin}
-                                >Login</button>
+                                {
+                                    (status === 'authenticated')
+                                        ? <LogOutButton />   
+                                        : <LogInButton />            
+                                }
                             </form>
                         </div>
                 </div>
