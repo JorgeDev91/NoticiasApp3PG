@@ -138,7 +138,7 @@ export const LogInForm = ({ setshowLogin }) => {
                           disabled = {isAuthenticating}
                           onClick={ () => setshowLogin(false)} 
                           
-                      > Crear una cuenta</label>
+                      > Create an account</label>
                     </div>
 
                 </div>

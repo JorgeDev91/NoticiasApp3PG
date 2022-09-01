@@ -36,7 +36,7 @@ export const NewAccount = ({ setshowLogin }) => {
                   <div
                       className='bg-light text-black d-flex justify-content-center py-2 mb-3 rounded'
                   >
-                    Crear Cuenta
+                    Create an account
                   </div>    
                 
                     <form>
@@ -90,7 +90,7 @@ export const NewAccount = ({ setshowLogin }) => {
                             disabled = { isCheckingAuthentication }
                             className="btn btn-secondary w-50"
                             onClick={handleSubmit(onSubmit)}
-                        > Crear cuenta</button>
+                        > Create account</button>
                       </div>
 
 
@@ -102,7 +102,7 @@ export const NewAccount = ({ setshowLogin }) => {
                             name='labelIngresar' 
                             className='font-weight-light'
                             onClick={ () => setshowLogin(true)} 
-                        >¿Ya tienes una cuenta? Ingresar</label>
+                        >Already have an account? Login</label>
                       </div>
                 </div>
             </div>
